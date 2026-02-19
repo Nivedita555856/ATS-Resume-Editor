@@ -1,0 +1,43 @@
+{
+  "personal_info": {
+    "name": "Alex Johnson",
+    "email": "alex.johnson@example.com",
+    "phone": "+1-555-123-4567",
+    "linkedin": "https://linkedin.com/in/alexjohnson",
+    "github": "https://github.com/alexjohnson",
+    "location": "San Francisco, CA"
+  },
+  "summary": "Software engineer with 5+ years building scalable backend APIs and cloud-native systems.",
+  "education": [
+    {
+      "degree": "B.S. in Computer Science",
+      "institution": "University of California, Davis",
+      "year": "2019",
+      "gpa": "3.7/4.0",
+      "relevant_courses": ["Data Structures", "Operating Systems", "Database Systems"]
+    }
+  ],
+  "skills": ["Python", "FastAPI", "Docker", "PostgreSQL", "AWS", "CI/CD"],
+  "certifications": ["AWS Certified Developer - Associate"],
+  "experience": [
+    {
+      "title": "Backend Engineer",
+      "company": "Acme Tech",
+      "start_date": "Jan 2022",
+      "end_date": "Present",
+      "bullets": [
+        "Developed REST APIs in FastAPI serving 1M+ monthly requests with 99.95% uptime.",
+        "Optimized PostgreSQL queries and reduced endpoint latency by 42%.",
+        "Led migration to Docker-based deployments, decreasing release time from 2 hours to 20 minutes."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "ATS Resume Analyzer",
+      "description": "Built a resume parsing and ATS scoring tool using NLP and FastAPI.",
+      "tech_stack": ["Python", "FastAPI", "scikit-learn", "OpenAI API"],
+      "link": "https://github.com/alexjohnson/ats-analyzer"
+    }
+  ]
+}

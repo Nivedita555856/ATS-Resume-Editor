@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titlespacing*{\section}{0pt}{0.6em}{0.2em}
+\pagenumbering{gobble}
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{ {{ resume.personal_info.name }} }}\\
+    {{ resume.personal_info.email }} \;|\; {{ resume.personal_info.phone }}
+    {% if resume.personal_info.location %} \;|\; {{ resume.personal_info.location }}{% endif %}\\
+    {% if resume.personal_info.linkedin %}\href{ {{ resume.personal_info.linkedin }} }{LinkedIn}{% endif %}
+    {% if resume.personal_info.github %} \;|\; \href{ {{ resume.personal_info.github }} }{GitHub}{% endif %}
+\end{center}
+
+{% if resume.summary %}
+\section*{Summary}
+{{ resume.summary }}
+{% endif %}
+
+\section*{Core Skills}
+\begin{itemize}[leftmargin=*,itemsep=0.1em]
+{% for skill in resume.skills %}
+\item {{ skill }}
+{% endfor %}
+\end{itemize}
+
+\section*{Professional Experience}
+{% for exp in resume.experience %}
+\textbf{ {{ exp.title }} } --- {{ exp.company }} \hfill {{ exp.start_date }} to {{ exp.end_date }}
+\begin{itemize}[leftmargin=*,itemsep=0.1em]
+{% for bullet in exp.bullets %}
+\item {{ bullet }}
+{% endfor %}
+\end{itemize}
+{% endfor %}
+
+\section*{Education}
+{% for edu in resume.education %}
+\textbf{ {{ edu.degree }} }, {{ edu.institution }} \hfill {{ edu.year }}
+{% if edu.gpa %}\\GPA: {{ edu.gpa }}{% endif %}
+{% if edu.relevant_courses %}\\Relevant Courses: {{ edu.relevant_courses | join(', ') }}{% endif %}
+
+{% endfor %}
+
+{% if resume.projects %}
+\section*{Projects}
+{% for project in resume.projects %}
+\textbf{ {{ project.name }} }
+{% if project.link %} -- \href{ {{ project.link }} }{Project Link}{% endif %}\\
+{{ project.description }}
+{% if project.tech_stack %}\\\textit{Tools: {{ project.tech_stack | join(', ') }}}{% endif %}
+
+{% endfor %}
+{% endif %}
+
+{% if resume.certifications %}
+\section*{Certifications}
+\begin{itemize}[leftmargin=*,itemsep=0.1em]
+{% for cert in resume.certifications %}
+\item {{ cert }}
+{% endfor %}
+\end{itemize}
+{% endif %}
+
+\end{document}
