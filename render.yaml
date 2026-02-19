@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ats-resume-editor-backend
+    env: docker
+    rootDir: backend
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: APP_ENV
+        value: production
