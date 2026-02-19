@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4em}
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\pagenumbering{gobble}
+\begin{document}
+
+{\LARGE \textbf{ {{ resume.personal_info.name }} }}\\
+\href{mailto:{{ resume.personal_info.email }}}{{ resume.personal_info.email }} \;|\; {{ resume.personal_info.phone }}
+{% if resume.personal_info.location %} \;|\; {{ resume.personal_info.location }}{% endif %}
+{% if resume.personal_info.linkedin %} \;|\; \href{ {{ resume.personal_info.linkedin }} }{LinkedIn}{% endif %}
+{% if resume.personal_info.github %} \;|\; \href{ {{ resume.personal_info.github }} }{GitHub}{% endif %}
+
+{% if resume.summary %}
+\section*{Professional Summary}
+{{ resume.summary }}
+{% endif %}
+
+\section*{Skills}
+{{ resume.skills | join(', ') }}
+
+{% if resume.certifications %}
+\section*{Certifications}
+\begin{itemize}[leftmargin=*,nosep]
+{% for cert in resume.certifications %}
+\item {{ cert }}
+{% endfor %}
+\end{itemize}
+{% endif %}
+
+\section*{Experience}
+{% for exp in resume.experience %}
+\textbf{ {{ exp.title }} } \hfill {{ exp.start_date }} -- {{ exp.end_date }}\\
+{{ exp.company }}
+\begin{itemize}[leftmargin=*,nosep]
+{% for bullet in exp.bullets %}
+\item {{ bullet }}
+{% endfor %}
+\end{itemize}
+{% endfor %}
+
+\section*{Education}
+{% for edu in resume.education %}
+\textbf{ {{ edu.degree }} } -- {{ edu.institution }} \hfill {{ edu.year }}
+{% if edu.gpa %}\\GPA: {{ edu.gpa }}{% endif %}
+{% if edu.relevant_courses %}\\Relevant Courses: {{ edu.relevant_courses | join(', ') }}{% endif %}
+
+{% endfor %}
+
+{% if resume.projects %}
+\section*{Projects}
+{% for project in resume.projects %}
+\textbf{ {{ project.name }} }
+{% if project.link %} (\href{ {{ project.link }} }{Link}){% endif %}\\
+{{ project.description }}
+{% if project.tech_stack %}\\Tech Stack: {{ project.tech_stack | join(', ') }}{% endif %}
+
+{% endfor %}
+{% endif %}
+
+\end{document}
