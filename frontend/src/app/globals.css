@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-50 text-slate-900;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.spinner {
+  border: 3px solid #e2e8f0;
+  border-top-color: #4f46e5;
+  border-radius: 9999px;
+  width: 24px;
+  height: 24px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
