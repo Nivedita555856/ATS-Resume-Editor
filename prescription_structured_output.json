@@ -1,0 +1,102 @@
+[
+  {
+    "raw_text": "Tab. Amitriptyline 25 mg 1 tablet OD for 5 days at bedtime",
+    "medicine_name": "Amitriptyline",
+    "form": "tablet",
+    "strength": "25 mg",
+    "dosage": "1 tablet",
+    "frequency": "OD, at bedtime",
+    "duration": "5 days",
+    "notes": ""
+  },
+  {
+    "raw_text": "Cap Azithromycin 500mg 1 cap OD x 3 days after meals",
+    "medicine_name": "Azithromycin",
+    "form": "capsule",
+    "strength": "500mg",
+    "dosage": "1 cap",
+    "frequency": "OD, after meals",
+    "duration": "3 days",
+    "notes": ""
+  },
+  {
+    "raw_text": "Syp Coughnil 5 ml BD for 7 days",
+    "medicine_name": "Coughnil",
+    "form": "syrup",
+    "strength": "5 ml",
+    "dosage": "5 ml",
+    "frequency": "BD",
+    "duration": "7 days",
+    "notes": ""
+  },
+  {
+    "raw_text": "Inj. Ceftriaxone 1 g IV BD for 3 days",
+    "medicine_name": "Ceftriaxone",
+    "form": "injection",
+    "strength": "1 g",
+    "dosage": "",
+    "frequency": "BD",
+    "duration": "3 days",
+    "notes": "IV"
+  },
+  {
+    "raw_text": "Tab Metformin SR 500 mg 1-0-1 for 30 days after food",
+    "medicine_name": "Metformin SR",
+    "form": "tablet",
+    "strength": "500 mg",
+    "dosage": "1-0-1",
+    "frequency": "",
+    "duration": "30 days",
+    "notes": "after food"
+  },
+  {
+    "raw_text": "Tab PCM 650 SOS fever",
+    "medicine_name": "PCM",
+    "form": "tablet",
+    "strength": "",
+    "dosage": "",
+    "frequency": "SOS",
+    "duration": "",
+    "notes": "650 fever"
+  },
+  {
+    "raw_text": "Levocet 5mg HS x 10days",
+    "medicine_name": "Levocet",
+    "form": "",
+    "strength": "5mg",
+    "dosage": "",
+    "frequency": "HS",
+    "duration": "10 days",
+    "notes": ""
+  },
+  {
+    "raw_text": "Oint Mupirocin apply local TID for 5 days",
+    "medicine_name": "Mupirocin",
+    "form": "ointment",
+    "strength": "",
+    "dosage": "",
+    "frequency": "TID",
+    "duration": "5 days",
+    "notes": "apply local"
+  },
+  {
+    "raw_text": "Cap Dolo? 650 mg if pain",
+    "medicine_name": "Dolo",
+    "form": "capsule",
+    "strength": "650 mg",
+    "dosage": "",
+    "frequency": "",
+    "duration": "",
+    "notes": "if pain"
+  },
+  {
+    "raw_text": "Tab. Vit D3 60K once weekly for 8 weeks",
+    "medicine_name": "Vit D3",
+    "form": "tablet",
+    "strength": "",
+    "dosage": "",
+    "frequency": "once weekly",
+    "duration": "8 weeks",
+    "notes": "60K"
+  }
+]
